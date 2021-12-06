@@ -9,5 +9,5 @@ class CourseBenefit extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['course_id','name'];
 }

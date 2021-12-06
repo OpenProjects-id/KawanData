@@ -2,7 +2,8 @@
 
 KawanData adalah website yang menyediakan modul pembelajaran seputar kemampuan data 
 
-
+# Project Management Board
+Untuk manajemen proyek bisa dilihat di [Notion.so](https://www.notion.so/db1a9f05a47643e4a33871d9bf1b71ac?v=62d94ea1f8cd486f824ff3fe810598aa)
 
 # Tata Cara dan Aturan
 
