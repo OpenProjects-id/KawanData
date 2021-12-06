@@ -109,7 +109,7 @@
                     </h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-lg-3 col-12">
                     <div class="item-benefit">
                         <img src="{{ asset('images/ic_globe.png') }}" class="icon" alt="">
