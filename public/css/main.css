@@ -123,7 +123,7 @@ body {
   margin-top: 100px;
   background: #4D1DAB;
   padding-top: 70px;
-  max-height: 620px;
+  max-height: 670px;
 }
 
 .pricing .copywriting {
@@ -387,3 +387,11 @@ body {
   height: 42px;
 }
 /*# sourceMappingURL=main.css.map */
+
+@media only screen and (max-width: 600px) {
+  .testimonials {
+    background: #F7F7FB;
+    margin-top: 800px;
+    padding: 70px 0 70px 0;
+  }
+}
