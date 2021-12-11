@@ -47,7 +47,6 @@ body {
 .login-user .right .btn-border {
   border: 1px solid #E7E5F4;
   border-radius: 50px;
-  padding: 12px 80px 12px 80px;
 }
 
 .login-user .right .btn-google-login {
@@ -383,10 +382,97 @@ body {
   font-weight: 500;
 }
 
+.footer-2-3 {
+  background-color: #4D1DAB;
+  min-height: 100vh;
+}
+
 .navbar .navbar-brand img {
   height: 42px;
 }
-/*# sourceMappingURL=main.css.map */
+
+.footer-2-3 .list-space {
+  margin-bottom: 1.25rem;
+}
+
+.footer-2-3 .footer-text-title {
+  font: 600 1.5rem Poppins, sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.footer-2-3 .list-menu {
+  color: white;
+  text-decoration: none !important;
+}
+
+.footer-2-3 .list-menu:hover {
+  color: #ffffff;
+}
+
+.footer-2-3 hr.hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid rgba(46, 46, 90, 1);
+}
+
+.footer-2-3 .border-color {
+  color: white;
+}
+
+.footer-2-3 .footer-link {
+  color: white;
+}
+
+.footer-2-3 .footer-link:hover {
+  color: #ffffff;
+}
+
+.footer-2-3 .social-media-c:hover circle,
+.footer-2-3 .social-media-p:hover path {
+  fill: #ffffff;
+}
+
+.footer-2-3 .footer-info-space {
+  padding-top: 3rem;
+}
+
+.footer-2-3 .list-footer {
+  padding: 5rem 1rem 3rem 1rem;
+}
+
+.footer-2-3 .info-footer {
+  padding: 0 1rem 3rem;
+}
+
+@media (min-width: 576px) {
+  .footer-2-3 .list-footer {
+    padding: 5rem 2rem 3rem 2rem;
+  }
+
+  .footer-2-3 .info-footer {
+    padding: 0 2rem 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-2-3 .list-footer {
+    padding: 5rem 4rem 6rem 4rem;
+  }
+
+  .footer-2-3 .info-footer {
+    padding: 0 4rem 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-2-3 .list-footer {
+    padding: 5rem 6rem 6rem 6rem;
+  }
+
+  .footer-2-3 .info-footer {
+    padding: 0 6rem 3rem;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .testimonials {
