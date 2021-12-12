@@ -26,7 +26,7 @@ Route::get('login', function () {
     return view('login');
 })->name('login');
 
-Route::get('checkout', function () {
+Route::get('checkout/{course:slug}', function () {
     return view('checkout');
 })->name('checkout');
 
