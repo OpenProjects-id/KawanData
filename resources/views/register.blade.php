@@ -201,12 +201,26 @@
               alt="" />
           </div>
           <img src="{{ asset('images/logo.png') }}" alt="" width="410px" height="80px" class="mb-5">
-          <h3 class="title-text">Silahkan Login</h3>
+          <h3 class="title-text">Silahkan Mendaftar Akun KawanData</h3>
           <p class="caption-text">
-           Mohon masuk menggunakan akun yang sudah<br />
-            terdaftar di website KawanData
+            Lengkapi form di bawah dengan
+            <br />
+            menggunakan data Anda yang valid
           </p>
           <form style="margin-top: 1.5rem" action="" method="post">
+            <div style="margin-bottom: 1.75rem">
+              <label for="" class="d-block input-label">Nama</label>
+              <div class="d-flex w-100 div-input">
+                <svg class="icon" style="margin-right: 1rem" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5 5C3.34315 5 2 6.34315 2 8V16C2 17.6569 3.34315 19 5 19H19C20.6569 19 22 17.6569 22 16V8C22 6.34315 20.6569 5 19 5H5ZM5.49607 7.13174C5.01655 6.85773 4.40569 7.02433 4.13168 7.50385C3.85767 7.98337 4.02427 8.59422 4.50379 8.86823L11.5038 12.8682C11.8112 13.0439 12.1886 13.0439 12.4961 12.8682L19.4961 8.86823C19.9756 8.59422 20.1422 7.98337 19.8682 7.50385C19.5942 7.02433 18.9833 6.85773 18.5038 7.13174L11.9999 10.8482L5.49607 7.13174Z"
+                    fill="#CACBCE" />
+                </svg>
+                <input class="input-field border-0" type="email" name="" id="" placeholder="Your Email Address"
+                  autocomplete="on" required />
+              </div>
+            </div>
             <div style="margin-bottom: 1.75rem">
               <label for="" class="d-block input-label">Alamat Email</label>
               <div class="d-flex w-100 div-input">
@@ -241,11 +255,8 @@
                 </div>
               </div>
             </div>
-            <div class="d-flex justify-content-end" style="margin-top: 0.75rem">
-              <a href="#" class="forgot-password fst-italic">Lupa Password?</a>
-            </div>
             <button class="btn btn-fill text-white d-block w-100" type="submit">
-              Masuk
+              Daftar Sekarang
             </button>
             <hr>
             {{--  --}}
@@ -256,8 +267,8 @@
             {{--  --}}
           </form>
           <p class="text-center bottom-caption">
-            Belum punya akun?
-            <a href="{{ route('register') }}" style="text-decoration: none;"><span class="green-bottom-caption">Daftar Disini</span></a>
+            Sudah punya akun?
+            <a href="{{ route('login') }}" style="text-decoration: none;"><span class="green-bottom-caption">Masuk Disini</span></a>
           </p>
         </div>
       </div>
