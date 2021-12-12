@@ -401,7 +401,7 @@
                         </div>
                         <nav class="list-unstyled">
                             <li class="list-space">
-                                <a href="" class="list-menu">Home</a>
+                                <a href="" class="list-menu">Dashboard</a>
                             </li>
                             <li class="list-space">
                                 <a href="" class="list-menu">About</a>
