@@ -202,7 +202,7 @@
               src="http://api.elements.buildwithangga.com/storage/files/2/assets/Empty%20State/EmptyState3/Empty-3-5.png"
               alt="" />
           </div>
-          <img src="{{ asset('images/logo.png') }}" alt="" width="410px" height="80px" class="mb-5">
+          <img src="{{ asset('images/logo.png') }}" alt="" width="310px" height="70px" class="mb-5">
           <h3 class="title-text">Silahkan Login</h3>
           <p class="caption-text">
            Mohon masuk menggunakan akun yang sudah<br />
@@ -251,16 +251,16 @@
             </button>
             <hr>
             {{--  --}}
-            <button class="btn btn-google d-block w-100 mt-3" type="submit">
+            <a class="btn btn-google d-block w-100 mt-3" href="{{ route('user.login.google') }}">
                 <img src="{{ asset('images/ic_google.svg') }}" class="icon" style="margin-right: 0.5em;">
                 Masuk dengan Google
-            </button>
+            </a>
             {{--  --}}
             {{--  --}}
-            <button class="btn btn-google d-block w-100 mt-3" type="submit">
-                <i class="fab fa-facebook-square" style="margin-right: 0.5em; color: blue;"></i>
+            <a class="btn btn-google d-block w-100 mt-3" type="submit">
+                <i class="fab fa-facebook-square" style="margin-right: 0.5em; color: #4267B2;"></i>
                 Masuk dengan Facebook
-            </button>
+            </a>
             {{--  --}}
           </form>
           <p class="text-center bottom-caption">
