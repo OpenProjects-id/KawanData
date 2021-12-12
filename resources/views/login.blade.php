@@ -6,6 +6,8 @@
       <title>Login KawanData</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
       <link rel="icon" href="{{ asset('images/icon.png') }}">
     </head>
     <body>
@@ -252,7 +254,13 @@
             <button class="btn btn-google d-block w-100 mt-3" type="submit">
                 <img src="{{ asset('images/ic_google.svg') }}" class="icon" style="margin-right: 0.5em;">
                 Masuk dengan Google
-              </button>
+            </button>
+            {{--  --}}
+            {{--  --}}
+            <button class="btn btn-google d-block w-100 mt-3" type="submit">
+                <i class="fab fa-facebook-square" style="margin-right: 0.5em; color: blue;"></i>
+                Masuk dengan Facebook
+            </button>
             {{--  --}}
           </form>
           <p class="text-center bottom-caption">
