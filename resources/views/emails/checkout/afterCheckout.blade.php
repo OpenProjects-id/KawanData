@@ -7,8 +7,8 @@ Selamat bergabung di Course {{$checkout->Course->Title}}!
 <br>
 Terima kasih sudah memilih platform Kawan Data sebagai tempat belajar kamu yaa! :D
 
-@component('mail::button', ['url' => route('user.checkout.invoice', $checkout->id)])
-Cek Invoice
+@component('mail::button', ['url' => route('dashboard')])
+Lihat Daftar Kelas
 @endcomponent
 
 Salam hangat,<br>
