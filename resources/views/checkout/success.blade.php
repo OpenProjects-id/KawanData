@@ -12,7 +12,7 @@
                     Wow!
                 </p>
                 <h2 class="primary-header ">
-                    Berhasil Checkout
+                    Berhasil Join Course
                 </h2>
                 <a href="{{ route('dashboard') }}" class="btn btn-primary mt-3">
                     Dashboard Saya

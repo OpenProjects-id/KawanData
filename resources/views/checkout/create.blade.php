@@ -20,7 +20,7 @@
                         <div class="item-bootcamp">
                             <img src="{{asset('images/item_bootcamp.png')}}" alt="" class="cover">
                             <h1 class="package">
-                                Basic Python
+                                {{$course->title}}
                             </h1>
                             <p class="description">
                                 Bootcamp ini akan mengajak Anda untuk belajar penuh mulai dari pengenalan dasar bahasa pemrograman Python
@@ -29,22 +29,23 @@
                     </div>
                     <div class="col-lg-1 col-12"></div>
                     <div class="col-lg-6 col-12">
-                        <form action="{{ route('success-checkout') }}" class="basic-form">
+                        <form action="{{ route('checkout.store', $course->id) }}" class="basic-form" method="POST">
+                            @csrf
                             <div class="mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label class="form-label">Nama Lengkap</label>
+                                <input name="name" type="text" class="form-control" required value="{{ Auth::user()->name }}"/>
                             </div>
                             <div class="mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Alamat Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label class="form-label">Alamat Email</label>
+                                <input name="email" type="email" class="form-control" required value="{{ Auth::user()->email }}"/>
                             </div>
                             <div class="mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Pekerjaan</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label class="form-label">Pekerjaan</label>
+                                <input name="occupation" type="text" class="form-control" required value="{{ Auth::user()->occupation }}"/>
                             </div>
                             <div class="mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Nomor HP</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label class="form-label">Nomor HP</label>
+                                <input name="handphone_number" type="text" class="form-control" required minlength="11" maxlength="13" value="{{ Auth::user()->handphone_number }}"/>
                             </div>
                             <button type="submit" class="w-100 btn btn-primary">Bayar Sekarang</button>
                             <p class="text-center subheader mt-4">
