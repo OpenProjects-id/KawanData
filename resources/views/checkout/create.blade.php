@@ -32,20 +32,32 @@
                         <form action="{{ route('checkout.store', $course->id) }}" class="basic-form" method="POST">
                             @csrf
                             <div class="mb-4">
-                                <label class="form-label">Nama Lengkap</label>
-                                <input name="name" type="text" class="form-control" required value="{{ Auth::user()->name }}"/>
+                                <label for="name" class="form-label">Nama Lengkap</label>
+                                <input name="name" type="text" class="form-control {{$errors->has('name') ? 'is-invalid' : ''}}" value="{{ Auth::user()->name }}" required/>
+                                @if ($errors->has('name'))
+                                    <p class="text-danger">{{ $errors->first('name') }}</p>
+                                @endif
                             </div>
                             <div class="mb-4">
-                                <label class="form-label">Alamat Email</label>
-                                <input name="email" type="email" class="form-control" required value="{{ Auth::user()->email }}"/>
+                                <label for="email" class="form-label">Alamat Email</label>
+                                <input name="email" type="email" class="form-control {{$errors->has('email') ? 'is-invalid' : ''}}" value="{{ Auth::user()->email }}" required/>
+                                @if ($errors->has('email'))
+                                    <p class="text-danger">{{ $errors->first('email') }}</p>
+                                @endif
                             </div>
                             <div class="mb-4">
-                                <label class="form-label">Pekerjaan</label>
-                                <input name="occupation" type="text" class="form-control" required value="{{ Auth::user()->occupation }}"/>
+                                <label for="occupation" class="form-label">Pekerjaan</label>
+                                <input name="occupation" type="text" class="form-control {{$errors->has('occupation') ? 'is-invalid' : ''}}" value="{{ old('occupation') ? : Auth::user()->occupation }}" required/>
+                                @if ($errors->has('occupation'))
+                                    <p class="text-danger">{{ $errors->first('occupation') }}</p>
+                                @endif
                             </div>
                             <div class="mb-4">
-                                <label class="form-label">Nomor HP</label>
-                                <input name="handphone_number" type="text" class="form-control" required minlength="11" maxlength="13" value="{{ Auth::user()->handphone_number }}"/>
+                                <label for="handphone_number" class="form-label">Nomor HP</label>
+                                <input name="handphone_number" type="text" class="form-control {{$errors->has('handphone_number') ? 'is-invalid' : ''}}" minlength="11" maxlength="13" value="{{ Auth::user()->handphone_number }}" required/>
+                                @if ($errors->has('handphone_number'))
+                                    <p class="text-danger">{{ $errors->first('handphone_number') }}</p>
+                                @endif
                             </div>
                             <button type="submit" class="w-100 btn btn-primary">Bayar Sekarang</button>
                             <p class="text-center subheader mt-4">

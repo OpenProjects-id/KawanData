@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\Checkout;
 use Illuminate\Http\Request;
+use App\Http\Requests\User\Checkout\Store;
 use App\Models\Course;
 use Auth;
 
@@ -25,8 +26,12 @@ class CheckoutController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Course $course)
+    public function create(Course $course, Request $request)
     {
+        if ($course->isRegistered) {
+            $request->session()->flash('error',"Kamu sudah terdaftar di course {$course->title}.");
+            return redirect(route('dashboard'));
+        }
         return view('checkout.create', [
             'course' => $course
         ]);
@@ -38,8 +43,9 @@ class CheckoutController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Course $course)
+    public function store(Store $request, Course $course)
     {
+        return $request->all();
         // Mapping request Data
         $data = $request->all();
         $data['user_id'] = Auth::id();
