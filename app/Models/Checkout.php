@@ -18,7 +18,12 @@ class Checkout extends Model
     //     $this->attribute['expired'] = date('Y-m-t', strtotime($value));
     // }
 
-    public function Course(): BelongsTo{
+    public function Course(): BelongsTo {
         return $this->belongsTo(Course::class);
     }
+
+    public function User(): BelongsTo {
+        return $this->belongsTo(User::class);
+    }
+    
 }
