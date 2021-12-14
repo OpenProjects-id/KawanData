@@ -1,6 +1,7 @@
 # KawanData
 
 KawanData adalah website yang menyediakan modul pembelajaran seputar kemampuan data 
+<br>
 ![Banner](https://github.com/OpenProjects-id/KawanData/blob/main/banner.jpg?raw=True)
 
 # Project Management Board
