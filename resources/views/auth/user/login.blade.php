@@ -206,7 +206,7 @@
               src="http://api.elements.buildwithangga.com/storage/files/2/assets/Empty%20State/EmptyState3/Empty-3-5.png"
               alt="" />
           </div>
-          <img src="{{ asset('images/logo.png') }}" alt="" width="310px" height="70px" class="mb-5">
+          <img src="{{ asset('images/logo.png') }}" alt="" width="300px" height="70px" class="mb-5">
           <h3 class="title-text">Silahkan Login</h3>
           <p class="caption-text">
             Mohon masuk menggunakan akun yang sudah<br />
