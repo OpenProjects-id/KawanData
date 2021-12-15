@@ -27,7 +27,7 @@ class UserController extends Controller
     public function loginWithFacebook()
     {
         try {
-            $user = Socialite::driver('facebook')->user();
+            $user = Socialite::driver('facebook')->stateless()->user();
             $isUser = User::where('fb_id', $user->id)->first();
      
             if ($isUser) {
