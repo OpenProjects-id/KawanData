@@ -25,10 +25,10 @@
 
 <body>
     @include('components.navbar')
-    @include('components.promote-bar')
     {{-- @include('layouts.navigation') --}}
-
+    
     @yield('content')
+    @include('components.promote-bar')
 
 
 

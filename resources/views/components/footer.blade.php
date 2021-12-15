@@ -4,8 +4,10 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="">
                         <div class="list-space">
-                            <img src="http://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header2/Header-2-3.png"
-                                alt="" />
+                            <img src="{{ asset('images/icon_putih.png') }}"
+                                alt="Logo"
+                                width="45px"
+                                height="45px" />
                         </div>
                         <nav class="list-unstyled">
                             <li class="list-space">
