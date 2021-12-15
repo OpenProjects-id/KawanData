@@ -45,7 +45,10 @@ class UserController extends Controller
                 return redirect(route('welcome'));
             }
         } catch (Exception $exception) {
-            dd($exception->getMessage());
+            if (env('APP_ENV') == "local") {
+                dd($exception->getMessage());
+            }
+            return redirect(route('login'))->with('login_failed', 'Login dengan Facebook gagal.');
         }
     }
     
