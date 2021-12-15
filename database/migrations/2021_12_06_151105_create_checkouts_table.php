@@ -17,7 +17,8 @@ class CreateCheckoutsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('course_id')->constrained();
-            $table->boolean('is_join');
+            $table->string('handphone_number')->nullable();
+            $table->boolean('is_join')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

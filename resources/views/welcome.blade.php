@@ -252,7 +252,7 @@
                                     <div class="clear"></div>
                                 </div>
                                 <p>
-                                    <a href="{{ route('checkout') }}" class="btn btn-master btn-primary w-100 mt-3">
+                                    <a href="{{ route('checkout.create', 'basic-python') }}" class="btn btn-master btn-primary w-100 mt-3">
                                         Ambil Kelas Ini
                                     </a>
                                 </p>
@@ -298,7 +298,7 @@
                                     <div class="clear"></div>
                                 </div>
                                 <p>
-                                    <a href="{{ route('checkout') }}" class="btn btn-master btn-secondary w-100 mt-3">
+                                    <a href="{{ route('checkout.create', 'basic-data-science') }}" class="btn btn-master btn-secondary w-100 mt-3">
                                         Ambil Kelas Ini
                                     </a>
                                 </p>

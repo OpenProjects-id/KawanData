@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable();
             $table->string('avatar')->nullable();
             $table->string('occupation')->nullable();
+            $table->string('handphone_number', 13)->nullable();
             $table->boolean('is_admin')->default(false);
             $table->string('fb_id')->nullable();
             $table->rememberToken();
