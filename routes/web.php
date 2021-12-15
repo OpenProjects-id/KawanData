@@ -43,4 +43,9 @@ Route::middleware(['auth'])->group(function () {
 Route::get('sign-in-google', [UserController::class, 'google'])->name('user.login.google');
 Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
 
+Route::get('auth/facebook', [UserController::class, 'facebookRedirect'])->name('user.login.facebook');
+
+Route::get('auth/facebook/callback', [UserController::class, 'loginWithFacebook'])->name('user.facebook.callback');
+
+
 require __DIR__.'/auth.php';

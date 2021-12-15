@@ -11,15 +11,48 @@ use App\Mail\User\AfterRegister;
 
 class UserController extends Controller
 {
-    public function login() {
+    public function login()
+    {
         return view('auth.user.login');
     }
 
-    public function google() {
+    public function google()
+    {
         return Socialite::driver('google')->redirect();
     }
 
-    public function handleProviderCallback() {
+    public function facebookRedirect()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    public function loginWithFacebook()
+    {
+        try {
+            $user = Socialite::driver('facebook')->user();
+            $isUser = User::where('fb_id', $user->id)->first();
+     
+            if ($isUser) {
+                Auth::login($isUser, true);
+                return redirect(route('welcome'));
+            } else {
+                $createUser = User::create([
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'fb_id' => $user->id,
+                    'password' => encrypt('admin@123')
+                ]);
+    
+                Auth::login($createUser, true);
+                return redirect(route('welcome'));
+            }
+        } catch (Exception $exception) {
+            dd($exception->getMessage());
+        }
+    }
+    
+    public function handleProviderCallback()
+    {
         $callback = Socialite::driver('google')->stateless()->user();
 
         $data = [
