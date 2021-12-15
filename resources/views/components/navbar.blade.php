@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light mt-5">
     <div class="container">
         <a class="navbar-brand" href="{{ route('welcome') }}">
             <img src="{{ asset('images/logo.png') }}" alt="Logo Kawan Data">
