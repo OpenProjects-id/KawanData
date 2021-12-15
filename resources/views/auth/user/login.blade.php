@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Login KawanData</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<html lang="en">
 
-      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login KawanData</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-      <link rel="icon" href="{{ asset('images/icon.png') }}">
-    </head>
-    <body>
-       <section class="h-100 w-100" style="box-sizing: border-box; background-color: #7839F3">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <link rel="icon" href="{{ asset('images/icon.png') }}">
+</head>
+
+<body>
+  <section class="h-100 w-100" style="box-sizing: border-box; background-color: #7839F3">
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -20,7 +24,7 @@
         border-radius: 50px;
         background-color: white;
         padding: 0.75rem 1rem;
-      }  
+      }
 
       .content-3-5 .btn:focus,
       .content-3-5 .btn:active {
@@ -205,7 +209,7 @@
           <img src="{{ asset('images/logo.png') }}" alt="" width="310px" height="70px" class="mb-5">
           <h3 class="title-text">Silahkan Login</h3>
           <p class="caption-text">
-           Mohon masuk menggunakan akun yang sudah<br />
+            Mohon masuk menggunakan akun yang sudah<br />
             terdaftar di website KawanData
           </p>
           <form style="margin-top: 1.5rem" action="" method="post">
@@ -250,22 +254,23 @@
               Masuk
             </button>
             <hr>
-            {{--  --}}
+            {{-- --}}
             <a class="btn btn-google d-block w-100 mt-3" href="{{ route('user.login.google') }}">
-                <img src="{{ asset('images/ic_google.svg') }}" class="icon" style="margin-right: 0.5em;">
-                Masuk dengan Google
+              <img src="{{ asset('images/ic_google.svg') }}" class="icon" style="margin-right: 0.5em;">
+              Masuk dengan Google
             </a>
-            {{--  --}}
-            {{--  --}}
-            <a class="btn btn-google d-block w-100 mt-3" type="submit">
-                <i class="fab fa-facebook-square" style="margin-right: 0.5em; color: #4267B2;"></i>
-                Masuk dengan Facebook
+            {{-- --}}
+            {{-- --}}
+            <a class="btn btn-google d-block w-100 mt-3" href="{{ route('user.login.facebook') }}">
+              <i class="fab fa-facebook-square" style="margin-right: 0.5em; color: #4267B2;"></i>
+              Masuk dengan Facebook
             </a>
-            {{--  --}}
+            {{-- --}}
           </form>
           <p class="text-center bottom-caption">
             Belum punya akun?
-            <a href="{{ route('register') }}" style="text-decoration: none;"><span class="green-bottom-caption">Daftar Disini</span></a>
+            <a href="{{ route('register') }}" style="text-decoration: none;"><span class="green-bottom-caption">Daftar
+                Disini</span></a>
           </p>
         </div>
       </div>
@@ -288,7 +293,10 @@
         }
       }
     </script>
-  </section> 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    </body>
-  </html>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
