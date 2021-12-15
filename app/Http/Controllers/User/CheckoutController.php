@@ -32,7 +32,7 @@ class CheckoutController extends Controller
     {
         if ($course->isRegistered) {
             $request->session()->flash('error',"Kamu sudah terdaftar di course {$course->title}.");
-            return redirect(route('dashboard'));
+            return redirect(route('user.dashboard'));
         }
         return view('checkout.create', [
             'course' => $course

@@ -36,17 +36,20 @@ Route::middleware(['auth'])->group(function () {
     Route::get('checkout/{course:slug}', [CheckoutController::class, 'create'])->name('checkout.create');
     Route::post('checkout/{course}', [CheckoutController::class, 'store'])->name('checkout.store');
 
-    // Dashboard
-    Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
-    // User Dashboard
-    Route::get('user/dashboard')->namespace('User')->name('user.')->group(function() {
-        Route::get('/', [UserDashboard::class, 'index'])->name('dashboard');
-    });
-
-    // Admin Dashboard
-    Route::get('admin/dashboard')->namespace('Admin')->name('admin.')->group(function() {
-        Route::get('/', [AdminDashboard::class, 'index'])->name('dashboard');
-    });
+     // user dashboard
+     Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+     Route::prefix('user/dashboard')->namespace('User')->name('user.')->group(function () {
+         Route::get('/', [UserDashboard::class, 'index'])->name('dashboard');
+         Route::get('checkout/invoice/{checkout}', [CheckoutController::class, 'invoice'])->name('checkout.invoice');
+     });
+ 
+     // admin dashboard
+     Route::prefix('admin/dashboard')->namespace('Admin')->name('admin.')->group(function () {
+         Route::get('/', [AdminDashboard::class, 'index'])->name('dashboard');
+ 
+         // admin checkout
+        //  Route::post('checkout/{checkout}', [AdminCheckout::class, 'update'])->name('checkout.update');
+     });
 
     // Route::get('dashboard/checkout/invoice/{checkout}', [CheckoutController::class, 'invoice'])->name('user.checkout.invoice');
 });
