@@ -28,17 +28,19 @@
                                         <td>Rp{{$checkout->Course->price}}</td>
                                         <td>{{$checkout->created_at->format('M d Y')}}</td>
                                         <td>
-                                            @if ($checkout->is_paid)
+                                            @if ($checkout->is_join)
                                                 <span class="badge bg-success">Sudah Bayar</span>
                                             @else
                                                 <span class="badge bg-warning">Menunggu</span>
                                             @endif
                                         </td>
                                         <td>
-                                            <form action="" method="POST">
-                                                @csrf
-                                                <button class="btn btn-primary btn-sm">Approve</button>
-                                            </form>
+                                            @if (!$checkout->is_join)
+                                                <form action="{{ route('admin.checkout.update', $checkout->id) }}" method="POST">
+                                                    @csrf
+                                                    <button class="btn btn-primary btn-sm">Approve</button>
+                                                </form>
+                                            @endif
                                         </td>
                                     </tr>
                                 @empty
