@@ -262,6 +262,12 @@
                 Masuk dengan Google
             </a>
             {{--  --}}
+            {{-- --}}
+            <a class="btn btn-google d-block w-100 mt-3" href="{{ route('user.login.facebook') }}">
+              <i class="fab fa-facebook-square" style="margin-right: 0.5em; color: #4267B2;"></i>
+              Masuk dengan Facebook
+            </a>
+            {{-- --}}
           </form>
           <p class="text-center bottom-caption">
             Sudah punya akun?
