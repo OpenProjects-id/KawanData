@@ -14,7 +14,7 @@ class AddPaymentStatusAndMidtransUrlAndMidtransBookingCodeInCheckoutTable extend
     public function up()
     {
         Schema::table('checkouts', function (Blueprint $table) {
-            $table->string('payment_status', 100)->defaukt('waiting')->after('course_id');
+            $table->string('payment_status', 100)->default('waiting')->after('course_id');
             $table->string('midtrans_url')->nullable()->after('payment_status');
             $table->string('midtrans_booking_code')->nullable()->after('midtrans_url');
         });

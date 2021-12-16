@@ -29,7 +29,7 @@ class Store extends FormRequest
             'name' => 'required|string',
             'occupation' => 'required',
             'handphone_number' => 'required|string',
-            'addres' => 'required|string',
+            'address' => 'required|string',
         ];
     }
 }

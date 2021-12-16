@@ -6,10 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Checkout;
 use Illuminate\Http\Request;
 use App\Http\Requests\User\Checkout\Store;
+use App\Mail\Checkout\AfterCheckout;
 use App\Models\Course;
 use Auth;
 use Mail;
-use App\Mail\Checkout\AfterCheckout;
 use Str;
 use Midtrans;
 
@@ -17,10 +17,11 @@ class CheckoutController extends Controller
 {
 
     public function __construct() {
-        Midtrans\Config::$serverKey = env('MIDTRANS_SERVERKEY');
-        Midtrans\Config::$isProduction = env('MIDTRANS_IS_PRODUCTION');
-        Midtrans\Config::$isSanitized = env('MIDTRANS_IS_SANITIZED');
-        Midtrans\Config::$is3ds = env('MIDTRANS_IS_3DS');
+        \Midtrans\Config::$clientKey = env('MIDTRANS_CLIENTKEY');
+        \Midtrans\Config::$serverKey = env('MIDTRANS_SERVERKEY');
+        \Midtrans\Config::$isProduction = env('MIDTRANS_IS_PRODUCTION');
+        \Midtrans\Config::$isSanitized = env('MIDTRANS_IS_SANITIZED');
+        \Midtrans\Config::$is3ds = env('MIDTRANS_IS_3DS');
     }
 
     /**
@@ -69,6 +70,7 @@ class CheckoutController extends Controller
         $user->name = $data['name'];
         $user->occupation = $data['occupation'];
         $user->handphone_number = $data['handphone_number'];
+        $user->address = $data['address'];
         $user->save();
 
         // Create Table Checkout
@@ -138,7 +140,8 @@ class CheckoutController extends Controller
     // Midtrans Handler
     public function getSnapRedirect(Checkout $checkout) {
         $orderId = $checkout->id.'-KD-'.Str::random(5);
-        $price = $checkout->Course->price;
+        // $price = $checkout->Course->price;
+        $price = 100;
 
         $checkout->midtrans_booking_code = $orderId;
 

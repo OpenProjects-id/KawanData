@@ -61,7 +61,7 @@
                             </div>
                             <div class="mb-4">
                                 <label for="address" class="form-label">Alamat</label>
-                                <input name="address" type="text" class="form-control {{$errors->has('address') ? 'is-invalid' : ''}}" minlength="11" maxlength="13" value="{{ Auth::user()->address }}" required/>
+                                <input name="address" type="text" class="form-control {{$errors->has('address') ? 'is-invalid' : ''}}" value="{{ Auth::user()->address }}" required/>
                                 @if ($errors->has('address'))
                                     <p class="text-danger">{{ $errors->first('address') }}</p>
                                 @endif
