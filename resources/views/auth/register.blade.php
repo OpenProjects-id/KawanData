@@ -215,7 +215,7 @@
                         menggunakan data Anda yang valid
                     </p>
                     @if (session('status'))
-                        <div class="alert alert-primary" role="alert">
+                        <div class="alert alert-success" role="alert">
                             Akun Anda berhasil didaftarkan. Silahkan konfirmasi email untuk dapat masuk ke KawanData.
                         </div>
                     @endif
