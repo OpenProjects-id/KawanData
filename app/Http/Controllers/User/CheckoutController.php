@@ -137,7 +137,7 @@ class CheckoutController extends Controller
 
     // Midtrans Handler
     public function getSnapRedirect(Checkout $checkout) {
-        $orderId = $checkout->id.'-'.Str::random(5);
+        $orderId = $checkout->id.'-KD-'.Str::random(5);
         $price = $checkout->Course->price;
 
         $checkout->midtrans_booking_code = $orderId;
@@ -198,7 +198,7 @@ class CheckoutController extends Controller
         $transaction_status = $notif->transaction_status;
         $fraud = $notif->fraud_status;
 
-        $checkout_id = explode('-', $notif->order_id)[0];
+        $checkout_id = explode('-KD-', $notif->order_id)[0];
         $checkout = Checkout::find($checkout_id);
 
         if ($transaction_status == 'capture') {
