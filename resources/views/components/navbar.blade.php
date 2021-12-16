@@ -1,12 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light py-4 mt-1">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('welcome') }}">
+        <a class="navbar-brand py-2" href="{{ route('welcome') }}">
             <img src="{{ asset('images/logo.png') }}" alt="Logo Kawan Data">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse py-2" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Program</a>
@@ -28,7 +28,12 @@
             <div class="d-flex user-logged nav-item dropdown no-arrow">
                 <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                     Halo, {{Auth::user()->name}}!
-                    <img src="{{Auth::user()->avatar}}" class="user-photo" alt="Avatar" style="border-radius: 50px;">
+                    @if (Auth::user()->avatar)
+                        <img src="{{Auth::user()->avatar}}" class="user-photo" alt="Avatar" style="border-radius: 50px;">
+                    @else
+                        <i class="fas fa-user-alt p-3"></i>
+                        {{-- <img src="" class="user-photo" alt="Avatar" style="border-radius: 50px;"> --}}
+                    @endif
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0; left: auto;">
                         <li>
                             <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
