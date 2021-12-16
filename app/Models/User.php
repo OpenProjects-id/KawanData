@@ -25,6 +25,7 @@ class User extends Authenticatable
         'avatar',
         'occupation',
         'handphone_number',
+        'address',
         'is_admin',
         'email_verified_at',
         'fb_id',
