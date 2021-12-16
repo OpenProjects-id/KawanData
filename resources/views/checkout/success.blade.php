@@ -14,6 +14,9 @@
                 <h2 class="primary-header ">
                     Berhasil Join Course
                 </h2>
+                <p>
+                    Silahkan menuju halaman Dashboard
+                </p>
                 <a href="{{ route('dashboard') }}" class="btn btn-primary mt-3">
                     Dashboard Saya
                 </a>

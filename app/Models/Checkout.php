@@ -12,7 +12,7 @@ class Checkout extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['user_id','course_id','handphone_number','is_join'];
+    protected $fillable = ['user_id','course_id','handphone_number','is_join', 'payment_status', 'midtrans_url', 'midtrans_booking_code'];
 
     // public function setExpiredAttribute($value) {
     //     $this->attribute['expired'] = date('Y-m-t', strtotime($value));

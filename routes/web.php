@@ -31,6 +31,10 @@ Route::get('login', function () {
     return view('login');
 })->name('login');
 
+// Midtrans Routes
+Route::get('payment/success', [CheckoutController::class, 'midtransCallback']);
+Route::post('payment/success', [CheckoutController::class, 'midtransCallback']);
+
 Route::middleware(['auth'])->group(function () {
     // Checkout Routes
     Route::get('checkout/success', [CheckoutController::class, 'success'])->name('checkout.success')->middleware('ensureUserRole:user');
