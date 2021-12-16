@@ -1,8 +1,17 @@
 <x-guest-layout>
+    <style>
+        .btn-login {
+            background-color: #7839F3;
+        }
+
+        .btn-login:hover {
+            background-color: #31B380;
+        }
+    </style>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <img src="{{ asset('images/logo.png') }}" alt="Logo Kawan Data" width="250" height="100">
             </a>
         </x-slot>
 
@@ -48,7 +57,7 @@
                 </a>
                 @endif
 
-                <x-button class="ml-3">
+                <x-button class="btn-login ml-3">
                     {{ __('Log in') }}
                 </x-button>
             </div>
