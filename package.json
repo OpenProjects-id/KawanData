@@ -9,11 +9,18 @@
         "prod": "npm run production",
         "production": "mix --production"
     },
+    "engines": {
+        "npm": ">=8.0.0",
+        "node": ">=16.0.0"
+    },
     "devDependencies": {
+        "@commitlint/cli": "^15.0.0",
+        "@commitlint/config-conventional": "^15.0.0",
         "@tailwindcss/forms": "^0.2.1",
         "alpinejs": "^3.4.2",
         "autoprefixer": "^10.1.0",
         "axios": "^0.21",
+        "husky": "^7.0.4",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.2.1",
