@@ -43,7 +43,10 @@
                         </td>
                     </tr>
                     @empty
-                        <h3 class="text-center">No Data</h3>
+                        <h3 class="text-center">Kamu belum mengikuti Course manapun.
+                            <br>
+                            Silahkan join salah satu Course yang ada di KawanData
+                        </h3>
                     @endforelse
                 </tbody>
             </table>
