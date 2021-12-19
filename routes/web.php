@@ -35,7 +35,7 @@ Route::get('login', function () {
 Route::get('payment/success', [CheckoutController::class, 'midtransCallback']);
 Route::post('payment/success', [CheckoutController::class, 'midtransCallback']);
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     // Checkout Routes
     Route::get('checkout/success', [CheckoutController::class, 'success'])->name('checkout.success')->middleware('ensureUserRole:user');
     Route::get('checkout/{course:slug}', [CheckoutController::class, 'create'])->name('checkout.create')->middleware('ensureUserRole:user');
@@ -47,11 +47,11 @@ Route::middleware(['auth'])->group(function () {
          Route::get('/', [UserDashboard::class, 'index'])->name('dashboard');
          Route::get('checkout/invoice/{checkout}', [CheckoutController::class, 'invoice'])->name('checkout.invoice');
      });
- 
+
      // admin dashboard
      Route::prefix('admin/dashboard')->namespace('Admin')->name('admin.')->middleware('ensureUserRole:admin')->group(function () {
          Route::get('/', [AdminDashboard::class, 'index'])->name('dashboard');
- 
+
          // admin checkout
          Route::post('checkout/{checkout}', [AdminCheckout::class, 'update'])->name('checkout.update');
      });
